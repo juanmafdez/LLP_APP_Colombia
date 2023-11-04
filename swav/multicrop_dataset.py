@@ -95,7 +95,7 @@ def scale_image(image):
 @tf.function
 def tie_together(image, min_scale, max_scale, crop_size):
 	# Retrieve the image features
-	image = image['image']
+	image = image
 	# Scale the pixel values
 	image = scale_image(image)
 	# Random resized crops
