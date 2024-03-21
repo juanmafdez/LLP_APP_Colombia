@@ -63,11 +63,11 @@ def custom_augment(image):
 @tf.function
 def random_resize_crop(image, min_scale, max_scale, crop_size):
 	# Conditional resizing
-	if crop_size == 56:
-		image_shape = 90
+	if crop_size == 86:
+		image_shape = 100
 		image = tf.image.resize(image, (image_shape, image_shape))
 	else:
-		image_shape = 45
+		image_shape = 64
 		image = tf.image.resize(image, (image_shape, image_shape))
 	# Get the crop size for given min and max scale
 	size = tf.random.uniform(shape=(1,), minval=min_scale*image_shape,
