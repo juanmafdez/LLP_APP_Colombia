@@ -1,0 +1,9 @@
+1. Debe contarse con los archivos .shp de los departamentos de Colombia y de los municipios de Colombia.
+2. Del .shp de los departamentos de selecciona el departamento de interés y se usa la extensión Get WKT String, aquí se generará la información del polígono
+luego, mediante la extensión QuickWKT se genera el .shp del departamento, de manera individual, con la infomación generada previamente.
+3. El nuevo .shp debe exportarse en EPSG 4326.
+4. El paso siguiente es mediante la acción´Vectorial, Herramientas de Geoproceso, Intersección, seleccionar como uno de los dos elementos el .shp generado
+en EPSG 4326, el otro elemento será el .shp de los municipios de colombia.
+5. El archivo resultante será el departamento con todos sus municipios, al exportarse debe asegurarse que sea en EPSG 4326.
+6. Del archivo .shp del departamento en EPSG 4326 se toma, por medio de Get WKT String, la información del polígono, este será el archivo de formato .wkt
+que se usará con geetiles. 
