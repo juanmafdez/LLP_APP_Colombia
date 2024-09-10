@@ -17,7 +17,7 @@ def get_resnet_backbone():
 def get_projection_prototype(dense_1=1024, dense_2=96, prototype_dimension=10):
 	inputs = layers.Input((2048, ))
 	projection_1 = layers.Dense(dense_1)(inputs)
-	#projection_1 = layers.BatchNormalization()(projection_1) cambio sugerido para hacer una prueba
+	projection_1 = layers.BatchNormalization()(projection_1) cambio sugerido para hacer una prueba
 	projection_1 = layers.Activation("relu")(projection_1)
 
 	projection_2 = layers.Dense(dense_2)(projection_1)
