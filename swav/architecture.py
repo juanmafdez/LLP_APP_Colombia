@@ -22,8 +22,7 @@ def get_projection_prototype(dense_1=1024, dense_2=96, prototype_dimension=10):
 	projection_1 = layers.Activation("relu")(projection_1)
 
 	projection_2 = layers.Dense(dense_2)(projection_1)
-	projection_2_normalize = tf.math.l2_normalize(projection_2, axis=1, name='projection')
-	#projection_2_normalize = Lambda(lambda x: tf.math.l2_normalize(x, axis=1), name='projection')(projection_2)
+	projection_2_normalize = Lambda(lambda x: tf.math.l2_normalize(x, axis=1), name='projection')(projection_2)
 
 	prototype = layers.Dense(prototype_dimension, use_bias=False, name='prototype')(projection_2_normalize)
 
