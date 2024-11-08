@@ -1,3 +1,2 @@
 # LLP_APP_Colombia
-In process...
-Mirando si se guardan los cambios
+Storage of SHP and WKT files for characterization of departments and municipalities of Colombia.
